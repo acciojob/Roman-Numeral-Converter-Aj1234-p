@@ -8,13 +8,67 @@ function convertToRoman(num) {
       5:['V', 5], 
       6:['I', 1]
     };
-
-  //your code here
-
+   let roman = "";
+   if(num>=1000){
+	   let times = Math.floor(num/1000);
+	   while(times) roman+='M';
+	   num%=1000;
+   }
+	else{
+		return roman.toUpperCase();
+	}
+   if(num>=500){
+	   let times = Math.floor(num/500);
+	   while(times) roman+='D';
+	   num%=500;
+   }
+	else{
+		return roman.toUpperCase();
+	}
+   if(num>=100){
+	   let times = Math.floor(num/100);
+	   while(times) roman+='C';
+	   num%=100;
+   }
+	else{
+		return roman.toUpperCase();
+	}
+   if(num>=50){
+	   let times = Math.floor(num/50);
+	   while(times) roman+='L';
+	   num%=50;
+   }
+	else{
+		return roman.toUpperCase();
+	}
+   if(num>=10){
+	   let times = Math.floor(num/10);
+	   while(times) roman+='L';
+	   num%=10;
+   }
+	else{
+		return roman.toUpperCase();
+	}
+   if(num>=5){
+	   let times = Math.floor(num/5);
+	   while(times) roman+='V';
+	   num%=5;
+   }
+	else{
+		return roman.toUpperCase();
+	}
+   if(num>=1){
+	   let times = Math.floor(num/1);
+	   while(times) roman+='I';
+	   num%=1;
+   }
+	else{
+		return roman.toUpperCase();
+	}
 }
 // You can test your code by running the above function and printing it to console by pressing the run button at the top. To run it with input 36, uncomment the following line
 
-// console.log(convertToRoman(36));
+console.log(convertToRoman(36));
 
 
 
