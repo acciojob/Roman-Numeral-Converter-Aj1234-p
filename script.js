@@ -11,7 +11,7 @@ function convertToRoman(num) {
    let roman = "";
    if(num>=1000){
 	   let times = Math.floor(num/1000);
-	   while(times) roman+='M';
+	   while(times--) roman+='M';
 	   num%=1000;
    }
 	else{
@@ -19,7 +19,7 @@ function convertToRoman(num) {
 	}
    if(num>=500){
 	   let times = Math.floor(num/500);
-	   while(times) roman+='D';
+	   while(times--) roman+='D';
 	   num%=500;
    }
 	else{
@@ -27,7 +27,7 @@ function convertToRoman(num) {
 	}
    if(num>=100){
 	   let times = Math.floor(num/100);
-	   while(times) roman+='C';
+	   while(times--) roman+='C';
 	   num%=100;
    }
 	else{
@@ -35,7 +35,7 @@ function convertToRoman(num) {
 	}
    if(num>=50){
 	   let times = Math.floor(num/50);
-	   while(times) roman+='L';
+	   while(times--) roman+='L';
 	   num%=50;
    }
 	else{
@@ -43,7 +43,7 @@ function convertToRoman(num) {
 	}
    if(num>=10){
 	   let times = Math.floor(num/10);
-	   while(times) roman+='L';
+	   while(times--) roman+='L';
 	   num%=10;
    }
 	else{
@@ -51,7 +51,7 @@ function convertToRoman(num) {
 	}
    if(num>=5){
 	   let times = Math.floor(num/5);
-	   while(times) roman+='V';
+	   while(times--) roman+='V';
 	   num%=5;
    }
 	else{
@@ -59,7 +59,7 @@ function convertToRoman(num) {
 	}
    if(num>=1){
 	   let times = Math.floor(num/1);
-	   while(times) roman+='I';
+	   while(times--) roman+='I';
 	   num%=1;
    }
 	else{
