@@ -17,6 +17,13 @@ function convertToRoman(num) {
    else if(num===0){
 		return roman.toUpperCase();
 	}
+    if(num>=900){
+	  roman+='CM';
+	  num%=900;
+	}
+    else if(num===0){
+		return roman.toUpperCase();
+	}	
    if(num>=500){
 	   let times = Math.floor(num/500);
 	   while(times--) roman+='D';
@@ -25,6 +32,13 @@ function convertToRoman(num) {
    else if(num===0){
 		return roman.toUpperCase();
 	}
+  if(num>=400){
+	  roman+='CD';
+	  num%=400;
+  }
+ else if(num===0){
+		return roman.toUpperCase();
+ }
    if(num>=100){
 	   let times = Math.floor(num/100);
 	   while(times--) roman+='C';
@@ -33,6 +47,13 @@ function convertToRoman(num) {
    else if(num===0){
 		return roman.toUpperCase();
 	}
+ if(num>=90){
+	 roman+='XC';
+	 num%=90;
+ }
+else if(num==0){
+		return roman.toUpperCase();
+}
   if(num>=50){
 	   let times = Math.floor(num/50);
 	   while(times--) roman+='L';
@@ -41,6 +62,13 @@ function convertToRoman(num) {
   else if(num===0){
 		return roman.toUpperCase();
 	}
+ if(num>=40){
+	 roman+='XL';
+	 num%=40;
+ }
+  else if(num==0){
+		return roman.toUpperCase();  
+  }
   if(num>=10){
 	   let times = Math.floor(num/10);
 	   while(times--) roman+='X';
@@ -49,6 +77,14 @@ function convertToRoman(num) {
   else if(num===0){
 		return roman.toUpperCase();
 	}
+  if(num>=9){
+	roman+='IX';
+	 num%=9;
+  }
+  else if(num===0){
+		return roman.toUpperCase();
+	}
+
   if(num>=5){
 	   let times = Math.floor(num/5);
 	   while(times--) roman+='V';
@@ -57,6 +93,14 @@ function convertToRoman(num) {
 	else if(num===0){
 		return roman.toUpperCase();
 	}
+	if(num===4){
+	  roman+='IV';
+		num%=4;
+	}
+	else if(num===0){
+		return roman.toUpperCase();
+	}
+	
   if(num>=1){
 	   let times = Math.floor(num/1);
 	   while(times--) roman+='I';
