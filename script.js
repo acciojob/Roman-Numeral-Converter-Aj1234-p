@@ -1,13 +1,4 @@
 function convertToRoman(num) {
-  	const obj = {
-      0:['M',1000], 
-      1:['D', 500], 
-      2:['C', 100], 
-      3:['L', 50], 
-      4:['X', 10], 
-      5:['V', 5], 
-      6:['I', 1]
-    };
    let roman = "";
    if(num>=1000){
 	   let times = Math.floor(num/1000);
